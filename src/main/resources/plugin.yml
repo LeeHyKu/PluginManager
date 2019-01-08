@@ -1,0 +1,8 @@
+name: Pluginmanager
+version: ${project.version}
+main: hklee.pluginmanager.Pluginmanager
+description: on/off Plugins
+
+commands:
+  pm:
+    description: PluginManager command
