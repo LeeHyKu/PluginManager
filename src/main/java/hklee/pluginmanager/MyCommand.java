@@ -126,7 +126,7 @@ public class MyCommand implements CommandExecutor {
                         if(f.exists()){
                             sender.sendMessage(ChatColor.YELLOW + "외부플러그인을 불러옵니다");
                             try {
-                                Bukkit.getPluginManager().loadPlugin(f);
+                                Bukkit.getPluginManager().enablePlugin(Bukkit.getPluginManager().loadPlugin(f));
                                 sender.sendMessage(ChatColor.AQUA + "플러그인을 불러오는데 성공했습니다");
                             }
                             catch (InvalidPluginException IPE){
