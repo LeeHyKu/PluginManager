@@ -2,6 +2,8 @@ name: Pluginmanager
 version: ${project.version}
 main: hklee.pluginmanager.Pluginmanager
 description: on/off Plugins
+author: HK_Lee
+website: https://github.com/LeeHyKu/PluginManager
 
 commands:
   pm:
