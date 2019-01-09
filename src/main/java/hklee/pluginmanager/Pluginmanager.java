@@ -8,6 +8,7 @@ public final class Pluginmanager extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         this.getCommand("pm").setExecutor(new MyCommand());
+        getServer().getPluginManager().registerEvents(new MyListener(),this);
     }
 
     @Override
