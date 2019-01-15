@@ -38,7 +38,7 @@ public class MyCommand implements CommandExecutor {
                     return true;
                 }
                 else{
-                    sender.sendMessage(ChatColor.RED + "콘솔은 사용할수 없습니다 /pl을 이용해주세요");
+                    sender.sendMessage(ChatColor.RED + "콘솔은 사용할수 없습니다 pl을 이용해주세요");
                     return false;
                 }
             }

@@ -69,8 +69,10 @@ public class MyListener implements Listener {
                                     Pls[a].getDescription().getDepend().contains(Pl.getName()) |
                                             Pls[a].getDescription().getSoftDepend().contains(Pl.getName())
                             ) {
-                                p.sendRawMessage(ChatColor.RED + "플러그인 " + Pl.getName() + "을 비활성화 하는데 실패했습니다 : 이 플러그인에 의존하는 다른 플러그인이 있습니다!");
-                                return;
+                                if(Pls[a].isEnabled()) {
+                                    p.sendRawMessage(ChatColor.RED + "플러그인 " + Pl.getName() + "을 비활성화 하는데 실패했습니다 : 이 플러그인에 의존하는 다른 플러그인이 있습니다!");
+                                    return;
+                                }
                             }
                         }
                     }
