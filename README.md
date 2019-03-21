@@ -6,7 +6,9 @@
 <td style="padding: 8px; font-size:95%;"><span style="color:white;"><b><font size="3"><big>이 코드는 놀랍게도 병신이 만든것 치고는 괜찮은 코드입니다.</big></font><br></b></span><br><span style="color:#000000"><span style="color:white">정말 놀랍게도! 이 코드는 병신이 만든 코드임에도 의외로 정밀하고, 적당한 양식을 갖추었습니다.<br>잘하면 실질적인 정보를 얻을 수도 있고, 재밌어서 적어도 킬링타임 정도의 평타는 칠 수 있습니다.<br>시간이 나면 이 코드를 정독해 보십시오.</span></span>
 </td></tr></tbody></table>
 마크 플긴 매니저
+
 ## Getting Started
+
 ### Prerequisites
 
 니 컴
