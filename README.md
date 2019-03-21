@@ -35,4 +35,4 @@ Lee Hyun Ku
 
 ## License
 
-This project is licensed under the MIT - see the [LICENSE](LICENSE) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
