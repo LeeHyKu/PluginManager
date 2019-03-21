@@ -6,7 +6,7 @@
 
     <groupId>hklee</groupId>
     <artifactId>pluginmanager</artifactId>
-    <version>1.1</version>
+    <version>v1.2</version>
     <packaging>jar</packaging>
 
     <name>Pluginmanager</name>
@@ -49,6 +49,12 @@
             <resource>
                 <directory>src/main/resources</directory>
                 <filtering>true</filtering>
+            </resource>
+            <resource>
+                <directory>${project.basedir}</directory>
+                <includes>
+                    <include>LICENCE</include>
+                </includes>
             </resource>
         </resources>
     </build>

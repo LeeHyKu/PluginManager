@@ -42,23 +42,12 @@ public class Util {
         }
     }
 
-    public static ItemStack getPluginInfo(Plugin Pl){
-        Material mat;
-        if(Pl.isEnabled()){
-            mat = Material.GREEN_GLAZED_TERRACOTTA;
-        }
-        else{
-            mat = Material.RED_GLAZED_TERRACOTTA;
-        }
+    public static ItemStack getPluginInfo(Plugin Pl) {
+        Material mat = Pl.isEnabled() ?
+                Material.GREEN_GLAZED_TERRACOTTA:
+                Material.RED_GLAZED_TERRACOTTA;
         ItemStack I = new ItemStack(mat);
-        String Title;
         ArrayList<String> Lore = new ArrayList<>();
-        if(Pl.isEnabled()){
-            Title = ChatColor.LIGHT_PURPLE + "[" + ChatColor.GREEN + "정상" + ChatColor.LIGHT_PURPLE + "]" + ChatColor.AQUA + Pl.getName();
-        }
-        else{
-            Title = ChatColor.LIGHT_PURPLE + "[" + ChatColor.RED + "비활성화" + ChatColor.LIGHT_PURPLE + "]" + ChatColor.AQUA + Pl.getName();
-        }
         if(Pl.getDescription().getVersion() != null){
             Lore.add(ChatColor.AQUA + "버전: " + ChatColor.GREEN + Pl.getDescription().getVersion());
         }
@@ -72,7 +61,11 @@ public class Util {
             Lore.add(ChatColor.AQUA + "설명:" + ChatColor.WHITE + Pl.getDescription().getDescription());
         }
         ItemMeta i = I.getItemMeta();
-        i.setDisplayName(Title);
+        i.setDisplayName(
+                Pl.isEnabled() ?
+                    ChatColor.LIGHT_PURPLE + "[" + ChatColor.GREEN + "정상" + ChatColor.LIGHT_PURPLE + "]" + ChatColor.AQUA + Pl.getName() :
+                    ChatColor.LIGHT_PURPLE + "[" + ChatColor.RED + "비활성화" + ChatColor.LIGHT_PURPLE + "]" + ChatColor.AQUA + Pl.getName()
+        );
         i.setLore(Lore);
         I.setItemMeta(i);
         return I;
